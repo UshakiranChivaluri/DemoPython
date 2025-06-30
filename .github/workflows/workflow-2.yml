@@ -1,0 +1,12 @@
+name: Workflow-2
+on:
+ workflow_dispatch:
+jobs:
+  Setup-environment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - name: Run Demo Python Program 
+        run: |
+          python Demo.py
