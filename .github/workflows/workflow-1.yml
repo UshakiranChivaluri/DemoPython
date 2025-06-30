@@ -1,0 +1,13 @@
+name: Workflow-1
+on:
+  workflow_dispatch:
+
+jobs:
+  setup-environment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - name: Check Python version
+        run: |
+          python --version
